@@ -11,8 +11,8 @@ overflow-x: hidden;
 
 
 :root {
---lime: #84cc16;
---lime-hover: #65a30d;
+--blue: #3b82f6;
+--blue-hover: #5b96f7;
 
 --brown: #7c5a3a;
 
@@ -58,18 +58,18 @@ margin: auto;
 /* Lenker */
 
 a {
-color: var(--lime);
+color: var(--blue);
 text-decoration: none;
 }
 
 a:hover {
-color: var(--lime-hover);
+color: var(--blue-hover);
 }
 
 .menu a.active {
-color: #84cc16;
+color: #3b82f6;
 font-weight: 700;
-border-bottom: 2px solid #84cc16;
+border-bottom: 2px solid #3b82f6;
 padding-bottom: 4px;
 }
 
@@ -91,7 +91,13 @@ flex-direction: column;
 .logo {
 font-size: 1.5rem;
 font-weight: 700;
-color: var(--lime);
+color: var(--blue);
+}
+
+.logo img {
+height: 70px;
+width: auto;
+display: block;
 }
 
 .menu {
@@ -105,7 +111,7 @@ transition: 0.2s;
 }
 
 .menu a:hover {
-color: var(--lime);
+color: var(--blue);
 }
 
 /* Hero */
@@ -129,7 +135,7 @@ margin-bottom: 2rem;
 
 .btn {
 display: inline-block;
-background: var(--lime);
+background: var(--blue);
 color: black;
 padding: 0.9rem 1.5rem;
 border-radius: 8px;
@@ -137,7 +143,7 @@ font-weight: bold;
 }
 
 .btn:hover {
-background: var(--lime-hover);
+background: var(--blue-hover);
 color: black;
 }
 
@@ -149,7 +155,7 @@ padding: 4rem 0;
 
 .section-title {
 margin-bottom: 2rem;
-color: var(--lime);
+color: var(--blue);
 }
 
 /* Kort */
@@ -251,4 +257,127 @@ font-weight: bold;
 font-size: 14px;
 
 margin: 0;
+}
+
+/*small info text*/
+.service-list {
+max-width: 800px;
+}
+
+.service-list details {
+margin-bottom: 10px;
+background: #181818;
+border-radius: 8px;
+overflow: hidden;
+}
+
+.service-list summary {
+padding: 15px;
+cursor: pointer;
+font-weight: 600;
+color: #fff;
+transition: background 0.3s;
+}
+
+.service-list summary:hover {
+background: #222;
+}
+
+.service-list p {
+padding: 0 15px 15px 15px;
+color: #ccc;
+line-height: 1.6;
+}
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+summary::before {
+    content: "▶";
+    margin-right: 10px;
+    color: #3b82f6;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+/*grid layout for services*/
+/* 2 kolonner på PC */
+
+
+.pros-cons {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.pros-cons > div {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .pros-cons {
+        flex-direction: column;
+    }
+}
+
+.pros-cons {
+    display: flex;
+    gap: 40px;
+}
+
+.column {
+    flex: 1;
+}
+
+.column .service-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+/* 3 kolonner på PC */
+.service-list-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Nettbrett */
+@media (max-width: 1000px) {
+    .service-list-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+    .service-list-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.service-list details {
+border: 1px solid var(--border);
+transition: all 0.2s ease;
+}
+
+.service-list details:hover {
+border-color: var(--blue);
+}
+
+@media (max-width: 768px) {
+
+    .pros-cons {
+        flex-direction: column;
+    }
+
+    .column .service-list {
+        grid-template-columns: 1fr;
+    }
+
 }
