@@ -334,7 +334,7 @@ details[open] summary::before {
     flex: 1;
 }
 
-.column .service-list {
+.column .service-list .service-list-3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
@@ -344,6 +344,15 @@ details[open] summary::before {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+}
+
+.service-list-3 details {
+border: 1px solid var(--border);
+transition: all 0.2s ease;
+}
+
+.service-list-3 details:hover {
+border-color: var(--blue);
 }
 
 /* Nettbrett */
