@@ -128,7 +128,7 @@ margin-bottom: 1rem;
 .hero p {
 color: var(--text-muted);
 max-width: 700px;
-margin-bottom: 2rem;
+margin-bottom: 1.5rem;
 }
 
 /* Knapp */
@@ -157,6 +157,16 @@ padding: 4rem 0;
 margin-bottom: 2rem;
 color: var(--blue);
 }
+
+.page-title {
+    color: var(--blue);
+}
+
+h4 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
 
 /* Kort */
 
@@ -373,6 +383,7 @@ details[open] summary::before {
     gap: 10px;
     align-items: flex-start;
 }
+
 
 .pros-cons > div {
     flex: 1;
