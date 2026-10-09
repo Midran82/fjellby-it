@@ -78,7 +78,7 @@ padding-bottom: 4px;
 header {
 background: #0d0d0d;
 border-bottom: 1px solid var(--border);
-padding: 1rem 0;
+padding: 0.5rem 0;
 }
 
 nav {
@@ -117,7 +117,7 @@ color: var(--blue);
 /* Hero */
 
 .hero {
-padding: 6rem 0;
+padding: 2rem 0;
 }
 
 .hero h1 {
@@ -307,11 +307,70 @@ details[open] summary::before {
 
 /*grid layout for services*/
 /* 2 kolonner på PC */
+/* ==========================================
+   Tjenester
+========================================== */
 
+.service-list-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-items: start;
+}
+
+@media (max-width: 1000px) {
+    .service-list-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-list-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-list-3 details {
+    background: #181818;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    min-height: 60px;
+}
+
+.service-list-3 summary {
+    padding: 15px;
+    font-weight: 600;
+}
+
+.service-list-3 details:hover {
+    border-color: var(--blue);
+    background: #1f1f1f;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   Linux fordeler / ulemper
+========================================== */
+
+.service-list {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: start;
+}
+@media (max-width: 768px) {
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+}
 
 .pros-cons {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     align-items: flex-start;
 }
 
@@ -325,68 +384,17 @@ details[open] summary::before {
     }
 }
 
-.pros-cons {
-    display: flex;
-    gap: 40px;
-}
-
-.column {
-    flex: 1;
-}
-
-.column .service-list .service-list-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-/* 3 kolonner på PC */
-.service-list-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-.service-list-3 details {
-border: 1px solid var(--border);
-transition: all 0.2s ease;
-}
-
-.service-list-3 details:hover {
-border-color: var(--blue);
-}
-
-/* Nettbrett */
-@media (max-width: 1000px) {
-    .service-list-3 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobil */
-@media (max-width: 768px) {
-    .service-list-3 {
-        grid-template-columns: 1fr;
-    }
-}
-
-
 .service-list details {
-border: 1px solid var(--border);
-transition: all 0.2s ease;
+    cursor: pointer;
+    background: #181818;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
 }
 
 .service-list details:hover {
-border-color: var(--blue);
-}
-
-@media (max-width: 768px) {
-
-    .pros-cons {
-        flex-direction: column;
-    }
-
-    .column .service-list {
-        grid-template-columns: 1fr;
-    }
-
+    border-color: var(--blue);
+    background: #1f1f1f;
+    transform: translateY(-2px);
 }
