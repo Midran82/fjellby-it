@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<link rel="icon" type="image/png" href="image/favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fjellby.IT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+<header>
+<div class="container">
+<nav>
+<div class="logo"><a href="index.html"><img src="image/fjellbyit.png" alt="Fjellby.IT"></a></div>
+
+<div class="menu">
+<a href="index.html">Hjem</a>
+<a href="about.html">Om meg</a>
+<a href="prosjekter.html">Prosjekter</a>
+<a href="services.html">Tjenester</a>
+<a href="contact.html" class="active">Kontakt</a>
+</div>
+</nav>
+</div>
+</header>
+
+
+<section class="hero container">
+
+
+<h1>overskrift</h1>
+
+<p>tekst</p>
+
+<p>tekst</p>
+</section>
+
+<footer>
+<p id="clock"></p>
+<p class="clock-style">&nbsp; &copy; 2026 Fjellby.IT</p>
+</footer>
+
+<script>
+function updateClock() {
+const now = new Date();
+
+document.getElementById("clock").textContent =
+now.toLocaleString();
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+</body>
+</html>
