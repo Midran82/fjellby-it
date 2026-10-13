@@ -260,7 +260,7 @@ text-align: center;
 
 }
 
-#clock {
+#clock, .clock-style{
 color: #84cc16;
 
 font-family: "Courier New", monospace;
@@ -269,6 +269,7 @@ font-size: 14px;
 
 margin: 0;
 }
+
 
 /*small info text*/
 .service-list {
