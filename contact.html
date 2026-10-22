@@ -38,16 +38,20 @@
 </section>
 
 <footer>
-<p id="clock"></p>
-<p class="clock-style">&nbsp; &copy; 2026 Fjellby.IT</p>
+    <p id="clock"></p>
+    <p class="clock-style">&copy; <span id="current-year"></span> Fjellby.IT</p>
 </footer>
+
+<script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
 
 <script>
 function updateClock() {
 const now = new Date();
 
 document.getElementById("clock").textContent =
-now.toLocaleString();
+now.toLocaleString("no-NO",{hour12: false});
 }
 
 updateClock();

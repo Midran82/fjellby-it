@@ -107,22 +107,27 @@
     <summary>Office pakken</summary>
     <p>Office pakken er ikke tilgjengelig for Linux (men det finnes alternativer som ser og fungerer på lik linje).</p>
 </details>
+</div>
+</div>
+</div>
 <br>
-</div>
-</div>
-</div>
 <p>Ta kontakt for en uforpliktende prat om hva som er best for deg og din PC.</p>
+</section>
 <footer>
-<p id="clock"></p>
-<p class="clock-style">&nbsp; &copy; 2026 Fjellby.IT</p>
+    <p id="clock"></p>
+    <p class="clock-style">&copy; <span id="current-year"></span> Fjellby.IT</p>
 </footer>
+
+<script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
 
 <script>
 function updateClock() {
 const now = new Date();
 
 document.getElementById("clock").textContent =
-now.toLocaleString();
+now.toLocaleString("no-NO",{hour12: false});
 }
 
 updateClock();
